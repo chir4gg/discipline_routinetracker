@@ -1,0 +1,101 @@
+.hero-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 16px; }
+.hero-card { padding: 22px; min-height: 170px; }
+.hero-card-top, .section-heading { display: flex; justify-content: space-between; gap: 15px; align-items: center; }
+.hero-card h2 { margin: 2px 0 0; font-size: 26px; letter-spacing: -.8px; }
+.big-number { font-size: clamp(42px, 6vw, 66px); line-height: 1; font-weight: 850; letter-spacing: -4px; margin: 4px 0 15px; }
+.ring { width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--accent) 0deg, var(--surface-3) 0deg); position: relative; }
+.ring::after { content: ""; position: absolute; inset: 7px; border-radius: 50%; background: var(--surface); }
+.ring span { position: relative; z-index: 1; font-size: 12px; font-weight: 850; }
+.progress-track { height: 7px; background: var(--surface-3); border-radius: 99px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: var(--accent); border-radius: inherit; transition: width .25s ease; }
+.hero-card > p { margin: 10px 0 0; font-size: 12px; }
+.step-input-row { display: flex; align-items: center; gap: 10px; margin-top: 13px; }
+.step-input-row input { max-width: 170px; }
+.mini-stats { display: flex; gap: 18px; margin-top: 12px; color: var(--muted); font-size: 11px; }
+.mini-stats strong { color: var(--text); margin-left: 4px; }
+.habit-list { display: grid; gap: 8px; }
+.habit-row { min-height: 64px; display: grid; grid-template-columns: 42px 1fr auto; gap: 12px; align-items: center; padding: 10px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); transition: .18s ease; }
+.habit-row:hover { border-color: rgba(105,230,163,.2); transform: translateY(-1px); }
+.habit-row.done { background: linear-gradient(90deg, rgba(105,230,163,.07), var(--surface)); }
+.habit-icon { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; background: var(--surface-2); font-size: 18px; }
+.habit-row.done .habit-icon { background: rgba(105,230,163,.13); }
+.habit-name { font-size: 14px; font-weight: 760; }
+.habit-target { color: var(--muted); font-size: 11px; margin-top: 2px; }
+.check-button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface-2); color: transparent; font-size: 18px; }
+.check-button.checked { background: var(--accent); color: #07120c; border-color: transparent; }
+.streak-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.streak-card { padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.streak-card .icon { font-size: 20px; }
+.streak-card h3 { margin: 7px 0 2px; font-size: 13px; }
+.streak-value { font-size: 24px; font-weight: 850; }
+.streak-sub { color: var(--muted); font-size: 10px; }
+.calendar-month { margin-top: 30px; }
+.month-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 12px; }
+.month-heading h2 { margin: 0; font-size: 24px; }
+.days-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.weekday-label { color: var(--muted); font-size: 10px; text-align: center; font-weight: 800; letter-spacing: .7px; padding: 5px; }
+.day-card { min-height: 116px; padding: 12px; border: 1px solid var(--line); background: var(--surface); border-radius: 14px; transition: .18s ease; }
+.day-card:hover { transform: translateY(-2px); border-color: rgba(105,230,163,.3); }
+.day-card.empty { visibility: hidden; }
+.day-card .day-number { font-weight: 850; font-size: 18px; }
+.day-card .day-week { color: var(--muted); font-size: 10px; }
+.day-card .day-progress { margin-top: 15px; font-weight: 850; color: var(--accent); }
+.day-card .day-steps { color: var(--muted); font-size: 10px; margin-top: 4px; }
+.day-card .tiny-track { height: 4px; margin-top: 9px; border-radius: 99px; background: var(--surface-3); overflow: hidden; }
+.day-card .tiny-fill { height: 100%; background: var(--accent); }
+.stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 20px; }
+.stat-card { padding: 18px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); }
+.stat-card .label { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
+.stat-card .value { font-size: 25px; font-weight: 850; margin-top: 7px; letter-spacing: -.6px; }
+.stat-card .detail { color: var(--muted); font-size: 10px; margin-top: 3px; }
+.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.chart-card { padding: 18px; }
+.chart-card h2 { font-size: 15px; margin: 0; }
+.chart-wrap { height: 280px; position: relative; }
+.week-card { border: 1px solid var(--line); background: var(--surface); border-radius: 15px; padding: 18px; margin-bottom: 10px; }
+.week-header { display: flex; justify-content: space-between; gap: 15px; align-items: center; }
+.week-header h3 { margin: 0; font-size: 15px; }
+.week-header p { margin: 3px 0 0; color: var(--muted); font-size: 11px; }
+.week-score { font-size: 23px; font-weight: 850; color: var(--accent); }
+.week-habits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 24px; margin-top: 16px; }
+.habit-analysis { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; font-size: 11px; }
+.habit-analysis .analysis-track { height: 5px; background: var(--surface-3); border-radius: 99px; overflow: hidden; grid-column: 1 / -1; }
+.habit-analysis .analysis-fill { height: 100%; background: var(--accent); }
+.steps-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 11px; }
+.steps-table th, .steps-table td { text-align: left; padding: 7px; border-bottom: 1px solid var(--line); }
+.steps-table th { color: var(--muted); }
+.month-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.month-card { padding: 18px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); }
+.month-card h3 { margin: 0 0 13px; }
+.month-stat { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+.month-stat:last-child { border-bottom: 0; }
+.month-stat span { color: var(--muted); }
+.settings-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.settings-card { padding: 20px; }
+.settings-card .section-title-row { margin-bottom: 18px; }
+.input-with-button, .button-row, .add-habit-row { display: flex; gap: 8px; align-items: center; }
+.input-with-button input { flex: 1; }
+.theme-options { display: flex; gap: 8px; }
+.theme-choice { flex: 1; min-height: 44px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface-2); color: var(--text); }
+.theme-choice.active { border-color: var(--accent); color: var(--accent); }
+.habit-setting { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.habit-setting:last-child { border-bottom: 0; }
+.habit-setting input { min-width: 0; }
+.small-btn { min-height: 36px; padding: 0 10px; border: 1px solid var(--line); background: var(--surface-2); color: var(--text); border-radius: 9px; font-size: 11px; }
+.small-btn.danger { color: var(--danger); }
+.danger-card { border-color: rgba(255,117,108,.2); }
+
+.weight-card h2 small { font-size: .42em; color: var(--muted); font-weight: 600; }
+
+/* Body weight tracker */
+.weight-card { min-width: 0; }
+.weight-card h2 { font-variant-numeric: tabular-nums; }
+.weight-card .field-label { display:block; margin-bottom:7px; }
+.weight-card input { width:100%; box-sizing:border-box; }
+
+.weight-panel { padding:20px; display:grid; grid-template-columns: 1fr 1.4fr; gap:20px; align-items:center; }
+.weight-panel-value { font-size:48px; font-weight:800; line-height:1; }
+.weight-panel-value small { font-size:18px; color:var(--muted); }
+.weight-panel-controls input { width:100%; box-sizing:border-box; }
+.weight-panel .mini-stats { grid-column:1 / -1; }
+@media (max-width:720px){ .weight-panel { grid-template-columns:1fr; } .weight-panel .mini-stats { grid-column:auto; } }

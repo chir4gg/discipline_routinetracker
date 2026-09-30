@@ -1,0 +1,12 @@
+{
+  "name": "92 Day Discipline Dashboard",
+  "short_name": "Discipline 92",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0d0f",
+  "theme_color": "#0b0d0f",
+  "description": "A personal 92-day habit and productivity tracker.",
+  "icons": [
+    {"src":"assets/icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

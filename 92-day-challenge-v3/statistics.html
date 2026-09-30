@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d0f"><link rel="manifest" href="manifest.json"><link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css">
+  <title>Statistics — 92 Day Discipline</title>
+</head>
+<body>
+<div id="app-shell">
+  <aside class="sidebar"><div class="brand"><div class="brand-mark">92</div><div><strong>Discipline</strong><span>Oct — Dec 2026</span></div></div>
+    <nav class="nav-links" aria-label="Main navigation"><a class="nav-link" href="index.html">⌂ <span>Dashboard</span></a><a class="nav-link" href="days.html">▦ <span>Days</span></a><a class="nav-link active" href="statistics.html">⌁ <span>Statistics</span></a><a class="nav-link" href="settings.html">⚙ <span>Settings</span></a></nav>
+    <div class="sidebar-footer"><span class="status-dot"></span> Local data only</div>
+  </aside>
+  <main class="main-content">
+    <header class="topbar"><div><p class="eyebrow">DATA & TRENDS</p><h1>Statistics</h1><p class="muted">See what you actually did — no arbitrary scoring.</p></div><button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle theme">☾</button></header>
+    <section id="stats-overview" class="stats-grid"></section>
+    <section class="chart-grid">
+      <article class="chart-card glass-card"><div class="section-title-row"><h2>Weekly habit completion</h2></div><div class="chart-wrap"><canvas id="weeklyChart"></canvas></div></article>
+      <article class="chart-card glass-card"><div class="section-title-row"><h2>Daily steps</h2></div><div class="chart-wrap"><canvas id="stepsChart"></canvas></div></article>
+      <article class="chart-card glass-card"><div class="section-title-row"><h2>Habit completion</h2></div><div class="chart-wrap"><canvas id="habitChart"></canvas></div></article>
+      <article class="chart-card glass-card"><div class="section-title-row"><h2>Monthly completion</h2></div><div class="chart-wrap"><canvas id="monthlyChart"></canvas></div></article>
+      <article class="chart-card glass-card"><div class="section-title-row"><div><h2>Body weight</h2><p class="muted">Starting weight: 92 kg</p></div></div><div class="chart-wrap"><canvas id="weightChart"></canvas></div></article>
+    </section>
+    <section class="content-section"><div class="section-title-row"><div><p class="eyebrow">WEEK BY WEEK</p><h2>Weekly analysis</h2></div></div><div id="weekly-analysis"></div></section>
+    <section class="content-section"><div class="section-title-row"><div><p class="eyebrow">MONTH BY MONTH</p><h2>Monthly statistics</h2></div></div><div id="monthly-analysis" class="month-grid"></div></section>
+  </main>
+</div>
+<nav class="mobile-nav" aria-label="Mobile navigation"><a href="index.html">⌂<span>Home</span></a><a href="days.html">▦<span>Days</span></a><a class="active" href="statistics.html">⌁<span>Stats</span></a><a href="settings.html">⚙<span>Settings</span></a></nav>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script><script src="js/storage.js"></script><script src="js/calendar.js"></script><script src="js/habits.js"></script><script src="js/statistics.js"></script><script src="js/app.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => { if (typeof renderStatisticsPage === 'function') renderStatisticsPage(); });</script>
+</body>
+</html>
